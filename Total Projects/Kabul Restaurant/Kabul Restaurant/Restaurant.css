@@ -495,7 +495,7 @@ body {
   background:
     linear-gradient(90deg, rgba(15, 19, 16, 0.82), rgba(15, 19, 16, 0.56) 48%, rgba(15, 19, 16, 0.12)),
     linear-gradient(0deg, rgba(15, 19, 16, 0.48), transparent 62%),
-    url("../Kabul images/hero.jpg") center 54% / cover no-repeat;
+   url("../Total Projects/Kabul Restaurant/Kabul images/hero.jpg") center 54% / cover no-repeat;
 }
 
 .nav {
