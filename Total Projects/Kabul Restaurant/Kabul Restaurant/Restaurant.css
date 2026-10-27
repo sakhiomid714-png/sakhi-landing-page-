@@ -489,7 +489,7 @@ body {
 
 .hero::before {
   position: absolute;
-  z-index: -1;
+ z-index: 0;
   inset: 0;
   content: "";
   background:
@@ -1037,7 +1037,7 @@ button:focus-visible {
     background:
       linear-gradient(90deg, rgba(15, 19, 16, 0.76), rgba(15, 19, 16, 0.36)),
       linear-gradient(0deg, rgba(15, 19, 16, 0.54), transparent 72%),
-      url("../Kabul images/hero.jpg") 58% center / cover no-repeat;
+      url("../Total Projects/Kabul Restaurant/Kabul images/hero.jpg") 58% center / cover no-repeat;
   }
 
   .hero-content {
