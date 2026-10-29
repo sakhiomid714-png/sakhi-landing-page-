@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To‑Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app" aria-labelledby="app-title">
+    <header class="app-header">
+      <h1 id="app-title">Ebrahimi To‑Do List</h1>
+      
+    </header>
+
+    <section class="todo-panel">
+      <form id="todo-form" class="todo-form" aria-label="Add todo">
+        <input id="todo-input" class="todo-input" autocomplete="off" placeholder="Add a new task and press Enter" aria-label="New todo" required />
+        <input id="todo-due" class="todo-date" type="date" aria-label="Due date" />
+        <button type="submit" class="btn btn-primary">Add</button> 
+      </form>
+
+      <div class="controls">
+        <div class="filters" role="tablist" aria-label="Filter todos">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="active" role="tab">Active</button>
+          <button class="filter" data-filter="completed" role="tab">Completed</button>
+        </div>
+        <button id="clear-completed" class="btn" aria-label="Clear completed">Clear completed</button>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+      <div class="footer">
+        <span id="count" class="count">0 items</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
