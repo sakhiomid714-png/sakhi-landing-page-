@@ -1,0 +1,659 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Modern Finance — Executive Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="login-screen" id="loginScreen" aria-label="Modern Finance login">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="brandmark">M</div>
+      <div><strong>Modern</strong><span>Finance OS</span></div>
+    </div>
+    <h2>Welcome back</h2>
+    <p>Sign in to open the Modern Finance dashboard.</p>
+    <form id="loginForm" novalidate>
+      <div class="login-fields">
+        <label class="login-field" for="loginEmail">
+          <span>Email</span>
+          <input id="loginEmail" type="email" autocomplete="username" value="sakhiomid714@gmail.com" required>
+        </label>
+        <label class="login-field" for="loginPassword">
+          <span>Password</span>
+          <input id="loginPassword" type="password" autocomplete="current-password" value="dash2026" required>
+        </label>
+        <label class="remember-row">
+          <input id="rememberLogin" type="checkbox">
+          <span>Remember me on this device</span>
+        </label>
+        <p class="login-error" id="loginError" role="alert"></p>
+        <button type="submit" class="login-submit">Sign in to Modern Finance</button>
+        <div class="login-demo">
+          <strong>Demo access</strong>
+          <span>Email: sakhiomid714@gmail.com</span>
+          <span>Password: dash2026</span>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="app" id="app">
+
+  <!-- =========================================================
+
+       SIDEBAR
+
+  ========================================================== -->
+
+  <aside class="sidebar">
+
+    <div class="brand">
+
+      <div class="brandmark">SM</div>
+
+      <div>
+
+        <span>Modern</span>
+
+        <small>Finance OS</small>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="nav-label">Workspace</div>
+
+      <nav class="nav">
+
+        <button class="active" data-view="Overview">
+
+          <span class="ico">◈</span>
+
+          <span>Overview</span>
+
+        </button>
+
+        <button data-view="Projects">
+
+          <span class="ico">▦</span>
+
+          <span>Projects</span>
+
+        </button>
+
+        <button data-view="Invoices">
+
+          <span class="ico">▤</span>
+
+          <span>Invoices</span>
+
+        </button>
+
+        <button data-view="Expenses">
+
+          <span class="ico">⌁</span>
+
+          <span>Expenses</span>
+
+        </button>
+
+        <button data-view="Cash Flow">
+
+          <span class="ico">↗</span>
+
+          <span>Cash Flow</span>
+
+        </button>
+
+      </nav>
+
+    </div>
+
+    <div>
+
+      <div class="nav-label">Manage</div>
+
+      <nav class="nav">
+
+        <button data-view="Reports">
+
+          <span class="ico">◫</span>
+
+          <span>Reports</span>
+
+        </button>
+
+        <button data-view="Team">
+
+          <span class="ico">◎</span>
+
+          <span>Team</span>
+
+        </button>
+
+        <button data-view="Settings">
+
+          <span class="ico">⚙</span>
+
+          <span>Settings</span>
+
+        </button>
+
+      </nav>
+
+    </div>
+
+    <div class="side-bottom">
+
+      <p>Workspace health</p>
+
+      <small>
+
+        All financial records are synced and up to date.
+
+      </small>
+
+      <button class="upgrade">
+
+        View insights
+
+      </button>
+
+    </div>
+
+  </aside>
+
+  <!-- =========================================================
+
+       MAIN APPLICATION
+
+  ========================================================== -->
+
+  <main class="main">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+      <div class="crumb">
+
+        Workspace /
+
+        <strong>Executive overview</strong>
+
+      </div>
+
+      <div class="actions">
+
+        <button
+
+          class="icon-btn"
+
+          title="Search"
+
+        >
+
+          ⌕
+
+        </button>
+
+        <button
+
+          class="icon-btn"
+
+          title="Notifications"
+
+        >
+
+          ♢
+
+        </button>
+
+        <button
+
+          class="theme-toggle"
+
+          id="themeToggle"
+
+          type="button"
+
+          aria-label="Switch to dark mode"
+
+          title="Switch to dark mode"
+
+        >
+
+          <span class="toggle-icon" aria-hidden="true">☾</span>
+
+          <span class="toggle-label">Dark</span>
+
+        </button>
+
+        <button
+
+          class="primary"
+
+          id="quickAdd"
+
+        >
+
+          ＋
+
+          <span>New entry</span>
+
+        </button>
+
+        <div class="creator-menu">
+          <button class="profile-button" id="creatorButton" type="button" aria-label="Open Sakhi Ebrahimi profile">
+            <img src="image/sakhi-profile.jpg" alt="Sakhi Ebrahimi" class="profile-photo" id="profilePhoto"
+                 onerror="this.onerror=null;this.src='image/sakh-profile.jpg';">
+            <span class="profile-name">Sakhi Ebrahimi</span>
+          </button>
+          <div class="logout-menu" id="profileMenu">
+            <button type="button" id="logoutButton">Logout</button>
+          </div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div>
+
+        <h1>
+
+          Good morning, Sakhi Ebrahimi.
+
+        </h1>
+
+        <p>
+
+          Here’s the financial pulse of your workspace.
+
+        </p>
+
+      </div>
+
+      <div class="period">
+
+        <button class="active">
+
+          30D
+
+        </button>
+
+        <button>
+
+          90D
+
+        </button>
+
+        <button>
+
+          6M
+
+        </button>
+
+        <button>
+
+          1Y
+
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- =======================================================
+
+         KPI CARDS
+
+    ======================================================== -->
+
+    <section class="grid4">
+      <article class="card kpi">
+        <div class="kpi-top"><span class="kpi-label">Total revenue</span><span class="trend" id="revenueTrend">Waiting</span></div>
+        <div class="kpi-value" id="totalRevenueValue">$0.00</div>
+        <div class="kpi-sub" id="totalRevenueSub">No invoice revenue yet</div>
+      </article>
+      <article class="card kpi">
+        <div class="kpi-top"><span class="kpi-label">Net profit</span><span class="trend" id="profitTrend">Positive</span></div>
+        <div class="kpi-value" id="netProfitValue">$0.00</div>
+        <div class="kpi-sub" id="netProfitSub">0.0% net margin</div>
+      </article>
+      <article class="card kpi">
+        <div class="kpi-top"><span class="kpi-label">Outstanding</span><span class="trend" id="outstandingCount" style="color:var(--warn);background:color-mix(in srgb,var(--warn) 13%,transparent)">0 invoices</span></div>
+        <div class="kpi-value" id="outstandingValue">$0.00</div>
+        <div class="kpi-sub" id="outstandingSub">$0.00 currently due</div>
+      </article>
+      <article class="card kpi">
+        <div class="kpi-top"><span class="kpi-label">Operating costs</span><span class="trend" id="costTrend">Waiting</span></div>
+        <div class="kpi-value" id="operatingCostsValue">$0.00</div>
+        <div class="kpi-sub" id="operatingCostsSub">0% of total revenue</div>
+      </article>
+    </section>
+
+    <!-- =======================================================
+
+         CHART + SIDE CARDS
+
+    ======================================================== -->
+
+    <section class="content">
+
+      <article class="card chart-card">
+
+        <div class="card-head">
+
+          <div>
+
+            <div class="card-title">
+
+              Financial performance
+
+            </div>
+
+            <div class="card-sub">
+
+              Revenue and net profit across the selected period
+
+            </div>
+
+          </div>
+
+          <div class="legend">
+
+            <span>
+
+              <i class="dot"></i>
+
+              Revenue
+
+            </span>
+
+            <span>
+
+              <i class="dot green"></i>
+
+              Profit
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="chart">
+
+          <div class="gridlines">
+
+            <i></i>
+
+            <i></i>
+
+            <i></i>
+
+            <i></i>
+
+            <i></i>
+
+          </div>
+
+          <svg
+
+            viewBox="0 0 800 210"
+
+            preserveAspectRatio="none"
+
+            aria-label="Financial performance chart"
+
+          >
+
+            <defs>
+
+              <linearGradient
+
+                id="fill"
+
+                x1="0"
+
+                y1="0"
+
+                x2="0"
+
+                y2="1"
+
+              >
+
+                <stop
+
+                  offset="0"
+
+                  stop-color="#6757e8"
+
+                  stop-opacity=".20"
+
+                />
+
+                <stop
+
+                  offset="1"
+
+                  stop-color="#6757e8"
+
+                  stop-opacity="0"
+
+                />
+
+              </linearGradient>
+
+            </defs>
+
+            <path
+
+              d="
+
+                M0 168
+
+                C55 158 65 138 110 146
+
+                S180 120 225 130
+
+                S290 96 335 111
+
+                S405 72 455 92
+
+                S520 58 565 72
+
+                S630 45 675 61
+
+                S740 34 800 44
+
+                L800 210
+
+                L0 210Z
+
+              "
+
+              fill="url(#fill)"
+
+            />
+
+            <path
+
+              d="
+
+                M0 168
+
+                C55 158 65 138 110 146
+
+                S180 120 225 130
+
+                S290 96 335 111
+
+                S405 72 455 92
+
+                S520 58 565 72
+
+                S630 45 675 61
+
+                S740 34 800 44
+
+              "
+
+              fill="none"
+
+              stroke="#6757e8"
+
+              stroke-width="4"
+
+              stroke-linecap="round"
+
+            />
+
+            <path
+
+              d="
+
+                M0 188
+
+                C60 184 75 171 110 176
+
+                S180 161 225 170
+
+                S290 147 335 154
+
+                S405 132 455 145
+
+                S520 119 565 131
+
+                S630 106 675 118
+
+                S740 95 800 102
+
+              "
+
+              fill="none"
+
+              stroke="#20b486"
+
+              stroke-width="3"
+
+              stroke-linecap="round"
+
+              stroke-dasharray="5 7"
+
+            />
+
+          </svg>
+
+          <div class="axis">
+
+            <span>Aug 28</span>
+
+            <span>Sep 04</span>
+
+            <span>Sep 11</span>
+
+            <span>Sep 18</span>
+
+            <span>Sep 28</span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <div class="side-stack">
+        <article class="card donut-card" id="expenseMixCard">
+          <div class="card-head">
+            <div><div class="card-title">Expense mix</div><div class="card-sub">Current period</div></div>
+            <button class="icon-btn" type="button" aria-label="Expense mix options">•••</button>
+          </div>
+          <div class="donut-wrap">
+            <div class="donut" id="expenseDonut"></div>
+            <div class="breakdown" id="expenseBreakdown"><div class="overview-empty compact-empty">No expenses yet.</div></div>
+          </div>
+        </article>
+        <article class="card donut-card" id="cashPositionCard">
+          <div class="card-head">
+            <div><div class="card-title">Cash position</div><div class="card-sub">Available across accounts</div></div>
+            <span class="trend" id="cashHealth">Waiting</span>
+          </div>
+          <div class="kpi-value" id="cashValue" style="font-size:24px">$0.00</div>
+          <div class="bar"><span id="cashBar" style="width:0%"></span></div>
+          <div class="kpi-sub" id="cashSub" style="margin-top:8px">0% of target liquidity</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bottom">
+      <article class="card projects" id="projectPortfolioCard">
+        <div class="card-head">
+          <div><div class="card-title">Project portfolio</div><div class="card-sub">Revenue progress by active engagement</div></div>
+          <button class="icon-btn" type="button" aria-label="Project portfolio options">↗</button>
+        </div>
+        <div class="overview-empty" id="projectPortfolioEmpty">No project data yet. Use <strong>New entry</strong> to add financial records.</div>
+      </article>
+      <article class="card activity" id="recentActivityCard">
+        <div class="card-head">
+          <div><div class="card-title">Recent activity</div><div class="card-sub">Latest financial movements</div></div>
+          <button class="icon-btn" type="button" aria-label="Recent activity options">•••</button>
+        </div>
+        <div class="overview-empty" id="recentActivityEmpty">No recent activity yet. New financial movements will appear here.</div>
+      </article>
+    </section>
+
+  <!-- RECENT ENTRIES / DATA RECORDS -->
+
+  <section class="card entries-card" id="entriesSection" aria-label="Recent data entries">
+
+    <div class="card-head">
+
+      <div>
+
+        <div class="card-title">Recent entries</div>
+
+        <div class="card-sub">Created financial records and their deletion controls</div>
+
+      </div>
+
+    </div>
+      <button class="delete-all-button" id="deleteAllEntries" type="button">Delete All</button>
+    </div>
+
+    <div id="entryList"></div>
+
+  </section>
+
+  </main>
+
+</div>
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
